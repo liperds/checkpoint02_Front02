@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/bariol-regular-2?styles=29982">
+                
+    <link rel="shortcut icon" href="#" type="image/x-icon"> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+    <!--  -->
+    <link rel="shortcut icon" href="img/73926.png" type="image/x-icon">
+    <!-- TODO -->
+
+    <script src="./js/index.js" defer></script>
+
+    <title>TO DO</title>
+</head>
+
+<body id="fundo">
+
+    <header>
+
+        <!-- INÍCIO BOTÃO DARK MODE -------------------------------------------------- -->
+        <div id="menu-superior">
+            
+            <div class="btn-bk form-check form-switch">
+                <input onclick="mudarCor(this)" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
+            </div>
+            <div id="api-button">
+                <a href="./json.html">
+                    <img src="./img/api.png" alt="api button">
+                </a>
+            </div>
+        </div>
+          <!-- FIM BOTÃO DARK MODE -------------------------------------------------- -->
+
+        <div class="container">
+            <div class="title">
+                <h1>Keep Notes</h1>
+            </div>
+            <div class="wrap">
+                <div class="search" id="search">
+                    <label for="searchInput">
+                        <i class="fas fa-search" style="color:black"></i>
+                    </label>
+                    <input class="search-input" id="searchInput" type="search" placeholder="Pesquisar">
+                </div>
+                <div class="filter">
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i>
+                        <span>Filtros</span>
+                    </button>
+                    <div class="filter-modal hidden" id="filterModal">
+                        <p>Filtros</p>
+                        <button class="apply-button">Apply</button><button class="cancel-button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section>
+            <div class="todo-container" id="todoContainer">
+
+                <div class="task">
+                    <input class="check" type="checkbox" name="" id="">
+                    <p class="title-task">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus praesentium
+                        magnam quaerat
+                        nesciunt quibusdam aliquam adipisci, cumque qui, aliquid ad ex nobis suscipit architecto animi
+                        ipsum alias earum possimus odio.</p>
+                    <div class="options">
+                        <span class="id-task">id:01</span>
+                        <!-- <button class="edit-button">
+                            <i class="fas fa-pen"></i>
+                        </button> -->
+                        <button id="delete-button" class="delete-button">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                    <!-- MODAL DELETE TODO (CONFIRMAÇÃO DE EXCLUSÃO) -->
+                    <div class="modal-delete-todo">
+                        <div class="container-sim-nao">
+                            <button class="sim-delete" type="button" >EXCLUIR</button>
+                            <button class="nao-delete" type="button" >CANCELAR</button>     
+                        </div>
+                    </div>
+                    <!-- MODAL DELETE TODO (CONFIRMAÇÃO DE EXCLUSÃO) -->    
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section-add-todo" id="sectionAddTodo">
+            <div class="add-todo">
+                <form class="add-todo-form" id="addForm" autocomplete="off">
+
+                    <div class="extras" id="extras">
+                        <div>
+                            <div class="categoria">
+                                <button></button>
+                                <select name="categorias" id="categorias">
+                                    <option value="">Escolha Categoria</option>
+                                    <option value="Mercado">Mercado</option>
+                                    <option value="Digital house">Digital House</option>
+                                    <option value="Filmes">Filmes</option>
+                                </select>
+                            </div>
+
+                            <div class="data-incial">
+                                <span style="color:black">Criado em: </span>
+                                <input type="text" name="data" id="data" readonly></input>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="add-task" id="addTask">
+                        <textarea id="addTaskInput" name="title" maxlength="150" rows="1"
+                            placeholder="Adicionar tarefa"></textarea>
+                        <button type="submit">
+                            <i class="far fa-arrow-up"></i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
